@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>x2Validate</title>
+		
+		<!--CODIFICACION DE CARACTERES:----------------------------------------------------------------------------------------------- -->
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):--------------------------------------------------------------------------------------- -->
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY VALIDATE):------------------------------------------------------------------------------ -->
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (X2-VALIDATE):---------------------------------------------------------------------------------- -->
+		<script type="text/javascript" src="js/x2Validate.js"></script>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAMOS LA HOJA DE ESTILOS:----------------------------------------------------------------------------------------- -->
+		<link rel="stylesheet" href="css/demo.css" type="text/css" />
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		
+	</head>
+		
+	<body>
+		<form name="frmValidacion" class="x2-validate" action="DML.html" method="post">
+			<h1>x2Validate</h1>
+			
+			<hr/>
+			
+			<h5>SOLO NÚMEROS:</h5>
+			<input type="text" name="SoloNumeros" class="digits required" />
+			
+			<br/><br/><hr/>
+			
+			<h5>SOLO LETRAS SIMPLE (SIN ESPACIOS):</h5>
+			<input type="text" name="SoloLetrasSSE" class="lettersonly required" />
+			
+			<br/><br/><hr/>
+			
+			<h5>SOLO LETRAS SIMPLE (CON ESPACIOS):</h5>
+			<input type="text" name="SoloLetrasSCE" class="lettersonlyWS required" />
+			
+			<br/><br/><hr/>
+			
+			<h5>SOLO LETRAS COMPLEJO (SIN ESPACIOS)</h5>
+			<input type="text" name="SoloLetrasCSE" class="specialletters required" />
+			
+			<br/><br/><hr/>
+			
+			<h5>SOLO LETRAS COMPLEJO (CON ESPACIOS)</h5>
+			<input type="text" name="SoloLetrasCCE" class="speciallettersWS required" />
+			
+			<br/><br/><hr/>
+			
+			<h5>SOLO MOUSE</h5>
+			<input type="text" name="SoloMouse" class="mouseonly required" />
+			
+			<br/><br/><hr/>
+			
+			<input type="submit" name="sbtEnviar" value="Enviar" />
+		</form>
+	</body>
+</html>
