@@ -1,24 +1,66 @@
-html, body{
-	font-family: "Open_Local";
+body {
+    font-family: "Open_Local";
 	width:100%;
 	height:100%;
 	cursor:default;
-	background-image:url('../images/Fondo_01.png');
+	background-image:url('../images/background.png');
 	color: #555;
     text-shadow: 0 .05em rgba(255,255,255,0.7);
 }
 
-/*FUENTES DE LETRA:------------------------------------------------------------------------------------------------------------------------------------------*/
-@font-face{
+#content {
+    min-width: 70%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px #ccc solid;
+    border-radius: 5px;
+}
+
+@font-face {
 	font-family: Open_Local;
 	src: url('../fonts/OpenSans Regular.ttf');
 }
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*LINEAS PUNTEADAS-------------------------------------------------------------------------------------------------------------------------------------------*/
-hr{
-	border:#B8B3B1 1px dashed;
+hr {
+	border-bottom:#B8B3B1 1px dashed;
 	border-style: none none dashed;
 	color:#FFFFFF;
 }
-/*-----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+h5 {
+    margin-bottom: 5px;
+}
+
+label.error {
+    color: #d00;
+    font-style: italic;
+    font-size: 12px;
+}
+
+input[type='submit'] {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    min-height: 30px;
+    line-height: 30px;
+    margin: 25px 0;
+    padding: 10px 30px;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 2px !important;
+    background-color: #efefef;
+    color: #000 !important;
+    border: 1px solid #bbb;
+    box-shadow: 0px 0px 3px #ccc;
+}
+input[type='submit']:hover {
+    background-color: rgb(89, 155, 230);
+    color: #fff !important;
+    border: 1px solid rgb(60, 120, 210);
+    text-shadow: 0px -1px 0 rgb(60, 120, 210);
+}
