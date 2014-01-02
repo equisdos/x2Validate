@@ -1,68 +1,50 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="en">
 	<head>
 		<title>x2Validate</title>
 		
-		<!--CODIFICACION DE CARACTERES:----------------------------------------------------------------------------------------------- -->
-		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		
-		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):--------------------------------------------------------------------------------------- -->
-		<script src="js/jquery-1.7.2.min.js"></script>
-		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!--REFERENCIAR DOCUMENTOS JS (JQUERY VALIDATE):------------------------------------------------------------------------------ -->
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!--REFERENCIAR DOCUMENTOS JS (X2-VALIDATE):---------------------------------------------------------------------------------- -->
 		<script type="text/javascript" src="js/x2Validate.js"></script>
-		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!--REFERENCIAMOS LA HOJA DE ESTILOS:----------------------------------------------------------------------------------------- -->
-		<link rel="stylesheet" href="css/demo.css" type="text/css" />
-		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
-		
+
+		<link rel="stylesheet" href="css/demo.css" type="text/css" />	
 	</head>
 		
 	<body>
-		<form name="frmValidacion" class="x2-validate" action="DML.html" method="post">
-			<h1>x2Validate</h1>
+	    <section id="content">
+		    <form class="x2-validate" action="success.html" method="get">
+			    <h1>x2Validate</h1>
+			    <h5>Validation and input control, using <a href="http://jquery.com">jQuery</a> and <a href="http://jqueryvalidation.org/">jQuery validation plugin</a></h5>
+			    <hr/>
 			
-			<hr/>
+			    <h5>digits:</h5>
+			    <input type="text" name="digits" class="digits" />
+
+			    <h5>digits, white space allowed:</h5>
+			    <input type="text" name="digits-ws" class="digits-ws" />
 			
-			<h5>SOLO NÚMEROS:</h5>
-			<input type="text" name="SoloNumeros" class="digits required" />
+			    <h5>letters only:</h5>
+			    <input type="text" name="lettersonly" class="lettersonly" />
 			
-			<br/><br/><hr/>
+			    <h5>letters only, white space allowed:</h5>
+			    <input type="text" name="lettersonly-ws" class="lettersonly-ws" />
 			
-			<h5>SOLO LETRAS SIMPLE (SIN ESPACIOS):</h5>
-			<input type="text" name="SoloLetrasSSE" class="lettersonly required" />
+			    <h5>allow special characters:</h5>
+			    <input type="text" name="specialchars" class="specialchars" />
 			
-			<br/><br/><hr/>
+			    <h5>allow special characters and white spaces:</h5>
+			    <input type="text" name="specialchars-ws" class="specialchars-ws" />
 			
-			<h5>SOLO LETRAS SIMPLE (CON ESPACIOS):</h5>
-			<input type="text" name="SoloLetrasSCE" class="lettersonlyWS required" />
-			
-			<br/><br/><hr/>
-			
-			<h5>SOLO LETRAS COMPLEJO (SIN ESPACIOS)</h5>
-			<input type="text" name="SoloLetrasCSE" class="specialletters required" />
-			
-			<br/><br/><hr/>
-			
-			<h5>SOLO LETRAS COMPLEJO (CON ESPACIOS)</h5>
-			<input type="text" name="SoloLetrasCCE" class="speciallettersWS required" />
-			
-			<br/><br/><hr/>
-			
-			<h5>SOLO MOUSE</h5>
-			<input type="text" name="SoloMouse" class="mouseonly required" />
-			
-			<br/><br/><hr/>
-			
-			<input type="submit" name="sbtEnviar" value="Enviar" />
-		</form>
+			    <input type="submit" value="Validate!" />
+		    </form>
+		</section>
+		
+	    <script type="text/javascript">
+	        $('.x2-validate').validate()
+	    </script>
+	
 	</body>
 </html>
